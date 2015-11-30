@@ -1,0 +1,127 @@
+# PYTHON COURSEWORK: A PATCHWORK SAMPLER
+# MATTHEW HAWKINS 769535
+# TERM 1
+
+from graphics import *
+
+
+def main():
+    #set variables
+    patchWorkSize = 0
+    colours = ["", "", ""]
+    
+    #get user inputs
+    patchWorkSize, colours = userInputs()
+    
+    #draw patches
+    drawPatchwork(patchWorkSize, colours)
+    
+    
+   
+    
+
+def userInputs():
+    availableSizes = ['5', '7', '9']
+    patchWorkSize = input("Enter the number of size of the patchwork, available options are '5', '7' or '9': ")  #put on two seperate lines
+    while patchWorkSize not in availableSizes or patchWorkSize.isalpha():
+        patchWorkSize = input("Please input a valid measurements e.g. '5', '7' or '9': ")  
+    
+
+    availableColours = ['red', 'green', 'blue', 'orange', 'magenta', 'cyan']
+    colours = []   
+    for i in range(3):
+        getColours = input("Enter a colour for the patch design, a list of available colours can be request by typing 'colours', you can't have the same colour more than once: ") #put on two seperate lines
+        if getColours == "colours":
+            print(availableColours)
+        else:
+            while (getColours not in availableColours) or (getColours not in availableColours):
+                getColours = input("Please enter a valid colour: ")
+                colours.append(getColours)
+
+    
+    return int(patchWorkSize), colours
+ 
+ 
+ 
+def drawPatchwork(patchWorkSize, colours):
+    win = GraphWin("patchwork", patchWorkSize * 100, patchWorkSize * 100)
+    win.setBackground("white")
+    win.setCoords(0, 0, 1, 1)
+    
+    x = 0
+    y = 0
+    
+    
+    lineX = 0
+    lineY = 0
+    
+    
+    for j in range(patchWorkSize):
+        lineDown = Line(Point(lineX, lineY), Point(lineX, lineY))
+        lineDown.setOutline("black")
+        lineDown.draw(win)
+        lineX = lineX + 0.2
+        
+        
+    lineX = 0
+    lineY = 0
+    
+    for k in range(patchWorkSize):
+        lineAcross = Line(Point(lineX, lineY), Point(lineX, lineY))
+        lineAcross.setOutline("black")
+        lineAcross.draw(win)
+        lineY = lineY + 0.2
+        
+    
+    
+    for l in range(patchWorkSize):
+        n = l
+        for l in range(patchWorkSize):
+            drawPatchTwo(win, x, y, patchWorkSize, colours)
+        
+    for m in range(patchWorkSize):
+        x = x + 0.2
+        y = y + 0.2
+        
+        drawPatchOne(win, x, y, patchWorkSize, colours) 
+
+ 
+def drawPatchOne(win, x, y, patchWorkSize, colours): 
+
+    x = x + 45
+    y = y + 45
+    
+    radius = 55
+    
+    for n in range(patchWorkSize):
+
+        radius = radius - 5
+        x = y + 5
+            
+        centre = Point(x, y)
+        loops = Circle(centre, radius)
+        loops.setWidth(1)
+            
+        for o in range(patchWorkSize):
+            loops.setOutline(colours)
+            loops.draw(win)
+            mouse = win.getMouse()
+            
+def drawPatchTwo(win, x, y, patchWorkSize, colours):
+    
+    for p in range(patchWorkSize):
+        
+        for q in range(patchWorkSize):
+            radius = 5
+            miniCircle = Circle(Point(x, y), radius)
+            miniCircle.draw(win)
+            miniCircle.setFill(colours)
+            mouse = win.getMouse()
+
+main()
+
+# make sure you draw the correct patch in the correct pattern
+# make sure the colours circle through the user inputted circles
+# make sure user cant choose the same colour twice
+
+# advanced -- swap two clicked patches around
