@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.params=
+comment0.target=Die()
+comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ die\r\n
+comment1.params=randomNumber
+comment1.target=void\ roll(java.util.Random)
+comment1.text=\r\n\ An\ example\ of\ a\ method\ -\ replace\ this\ comment\ with\ your\ own\r\n\ \r\n\ @param\ \ y\ \ \ a\ sample\ parameter\ for\ a\ method\r\n\ @return\ \ \ \ \ the\ sum\ of\ x\ and\ y\ \r\n
+comment2.params=randomNumber
+comment2.target=int\ getCurrentDot(int)
+numComments=3

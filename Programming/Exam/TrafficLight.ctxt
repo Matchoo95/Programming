@@ -1,0 +1,22 @@
+#BlueJ class context
+comment0.params=loc
+comment0.target=TrafficLight(java.lang.String)
+comment1.params=loc\ col\ changed
+comment1.target=TrafficLight(java.lang.String,\ java.lang.String,\ int)
+comment2.params=
+comment2.target=java.lang.String\ getLocation()
+comment3.params=
+comment3.target=java.lang.String\ getDisplay()
+comment4.params=
+comment4.target=int\ getLastChanged()
+comment5.params=
+comment5.target=void\ changeDisplay()
+comment6.params=
+comment6.target=void\ tick()
+comment7.params=
+comment7.target=void\ resetLastChanged()
+comment8.params=
+comment8.target=java.lang.String\ toString()
+comment9.params=newDisplay
+comment9.target=void\ setDisplay(java.lang.String)
+numComments=10

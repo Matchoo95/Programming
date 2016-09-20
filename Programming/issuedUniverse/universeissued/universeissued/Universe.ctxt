@@ -1,0 +1,20 @@
+#BlueJ class context
+comment0.params=
+comment0.target=Universe()
+comment0.text=\r\n\ Create\ a\ universe\ with\ default\ name\ and\ size.\ Creates\ a\ fresh\ canvas\ to\ display\ the\ universe\r\n
+comment1.params=name\ rightEdge\ bottomEdge
+comment1.target=Universe(java.lang.String,\ int,\ int)
+comment1.text=\r\n\ \ Create\ a\ universe\ with\ given\ name\ and\ size\r\n\ \ @param\ name\ The\ name\ to\ give\ the\ universe\r\n\ \ @param\ rightEdge\ The\ maximum\ x\ coordinate\r\n\ \ @param\ bottomEdge\ The\ maximum\ y\ coordinate\r\n
+comment2.params=spaceObj
+comment2.target=void\ erase(Space_Object)
+comment2.text=\r\n\ Erase\ an\ object\ from\ the\ view\ of\ the\ universe\r\n\ \r\n\ @param\ spaceObj\ The\ object\ to\ be\ erased\r\n
+comment3.params=spaceObj
+comment3.target=void\ draw(Space_Object)
+comment3.text=\r\n\ Draw\ an\ object\ at\ its\ current\ position\ onto\ the\ view\ of\ the\ universe.\r\n\ \r\n\ @param\ spaceObj\ The\ object\ to\ be\ drawn\r\n
+comment4.params=
+comment4.target=int\ getGround()
+comment4.text=\r\n\ Return\ the\ y\ cordinate\ of\ the\ bottom\ of\ the\ universe\r\n
+comment5.params=
+comment5.target=void\ demo()
+comment5.text=\r\n\ Add\ three\ objects\ and\ make\ them\ move\r\n
+numComments=6

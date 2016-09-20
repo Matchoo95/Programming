@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.params=
+comment0.target=Crossroads()
+comment1.params=a_light
+comment1.target=void\ storeTrafficLight(TrafficLight)
+comment2.params=location
+comment2.target=void\ operateLight(java.lang.String)
+numComments=3
