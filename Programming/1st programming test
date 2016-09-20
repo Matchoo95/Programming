@@ -1,0 +1,23 @@
+#In class test week 3 (b)
+#Matthew Hawkins 769535
+
+import math
+
+def biscuitCutting():
+    radius = eval(input("What is the radius of each biscuit in cm?"))
+    noOfBiscuitsWidth = eval(input("How many biscuits are along the width of the mixture?"))
+    noOfBiscuitsLength = eval(input("How many biscuits are along the length of the mixture?"))
+    
+    diameter = radius * 2
+    area = math.pi * (radius**2)
+    totalArea = (diameter * noOfBiscuitsWidth) * (diameter * noOfBiscuitsLength)
+    amountOfBiscuits = noOfBiscuitsWidth * noOfBiscuitsLength
+    spareMixture = totalArea - amountOfBiscuits
+    spareMixture = spareMixture / area
+    
+    
+    print("The diameter of each biscuit is ",diameter,"cm")
+    print("The area of each biscuit is ",area,"cm2")
+    print("The totalArea is",totalArea,"cm2")
+    print("The highest number of complete biscuits that can be made from the remaining mixture is ",int(spareMixture))
+biscuitCutting()
