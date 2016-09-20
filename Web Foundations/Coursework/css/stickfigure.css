@@ -1,0 +1,19 @@
+                              canvas {
+                                border: 2px solid black;
+                                display: block;
+                                margin: 1rem;
+                                width: 95%;
+                              }
+                              button {
+                                font-size: 100%;
+                                margin-left: 1rem;
+                              }
+                              .parameter {
+                                font-size: 100%;
+                                display: inline-block;
+                                margin-left: 3em;
+                              }
+                              .parameter input {
+                                display: inline-block;
+                                margin-left: 1em;
+                              }

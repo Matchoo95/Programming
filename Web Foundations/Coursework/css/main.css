@@ -1,0 +1,298 @@
+
+                              /* applys a fixed box model to each element making it easier for sizing elements */
+
+                            * {
+                              margin: 0;
+                              padding: 0;
+                            }
+                            * {
+                              -webkit-box-sizing: border-box;
+                              -moz-box-sizing: border-box;
+                              box-sizing: border-box;
+                            }
+                            /* text styles */
+
+                            h1 {
+                              display: inline-block;
+                              margin-bottom: 0.5em;
+                              padding: 0.5em 1em;
+                              text-align: center;
+                              font-size: 2em;
+                            }
+                            h2 {
+                              letter-spacing: 0.0625em;
+                              font-weight: 900;
+                              line-height: 1.5em;
+                              margin-bottom: 0.1em;
+                            }
+                            h3 {
+                              padding: 0.5em 0 0.25em 0;
+                              letter-spacing: 0.0625em;
+                              font-weight: 200;
+                              line-height: 1em;
+                            }
+                            p, li {
+                              padding: 0.5em 0;
+                              text-align: left;
+                              font-weight: 200;
+                              line-height: 1.5em;
+                              font-family: verdana, sans-serif;
+                            }
+                            p {
+                              text-indent: 3em;
+                            }
+
+                            /* layout */
+
+                            html {
+                              padding: 5%;
+                              background-color: #555;
+                            }
+                            header {
+                              text-align: center;
+                            }
+                            body {
+                              padding: 5%;
+                              border-radius: 0.625em;
+                              background: #eaeae8;
+                              font-family: "Open Sans", Helvetica, Arial, sans-serif;
+                              box-shadow: 0.2em 0.2em 0.5em rgba(0, 0, 0, 1);
+                            }
+                            section {
+                              padding: 0.3125em;
+                              margin-top: 0.3125em;
+                            }
+                            section > ul li {
+                              list-style: none;
+                            }
+                            section > p a:link {
+                              text-decoration: none;
+                              padding: 0.5em 0;
+                              text-align: left;
+                              font-weight: 200;
+                              line-height: 1.5em;
+                              font-family: verdana, sans-serif;
+                            }
+                            article {
+                              padding: 0.3125em;
+                              margin-top: 0.3125em;
+                              width: 100%;
+                            }
+                            aside {
+                              background-color: #ddd;
+                              margin-top: 0.3125em;
+                              padding: 0.3125em;
+                              width: 25%;
+                              height: 100%;
+                              margin: 0em -2em 0em 0.5em;
+                              border-radius: 0.625em;
+                              float: right;
+
+                            }
+                            aside > ul {
+                              list-style: none;
+                              text-align: left;
+                              font-size: 0.9em;
+                            }
+                            aside  li {
+                              font-family: "Open Sans", Helvetica, Arial, sans-serif;
+                            }
+                            aside > h1 {
+                              margin-top: 0.5em;
+                              text-align: center;
+                              font-size: 1.25em;
+                              line-height: 1em;
+                              text-transform: uppercase;
+                            }
+                            footer {
+                              width: 100%;
+                              padding: 0.3125em 5%;
+                              border-radius: 0.625em;
+                              color: #000;
+                              background-color: #f0ad4e;
+                              text-align: center;
+                              font-weight: bold;
+                            }
+                            /* links */
+
+                            a:link {
+                              color: #2200CC;
+                              font-weight: bold;
+                            }
+                            a:visited {
+                              text-decoration: underline;
+                              font-weight: bold;
+                              color: #551A8B;
+                            }
+                            a:hover, a:active {
+                              text-decoration: underline;
+                              color: #551A8B;
+                            }
+                            /* navigation */
+
+                            nav {
+                              color: #fff;
+                            }
+                            nav > ul li {
+                              font-family: "Open Sans", Helvetica, Arial, sans-serif;
+                            }
+                            nav a:link {
+                              text-decoration: none;
+                            }
+                            nav > ul ul {
+                              display: none;
+                              position: absolute;
+                              border-radius: 0.625em;
+                            }
+                            nav > ul li:hover > ul {
+                              display: block;
+                              z-index: 2;
+                            }
+                            nav ul {
+                              display: inline-table;
+                              padding: 0 1.25em;
+                              border-radius: 0.625em;
+                              list-style: none;
+                              background: #1b1b1b;
+                              box-shadow: 0.2em 0.2em 0.5em rgba(0, 0, 0, 1);
+                            }
+                            nav > ul li {
+                              float: left;
+                            }
+                            nav > ul li:hover {
+                              background: #000000;
+                              border-radius: 0.625em;
+                            }
+                            nav > ul li:hover a {
+                              color: inherit;
+                              height: 100%;
+                              text-decoration: none;
+                            }
+                            nav > ul li a {
+                              display: block;
+                              padding: 1em 3em;
+                            }
+                            nav > ul ul li a {
+                              font-size: 1em;
+                              font-weight: 200;
+                              text-align: left;
+                              padding: 1em 1em;
+                            }
+                            nav > ul ul li a:hover {
+                              background: #000000;
+                              color: inherit;
+                            }
+                            nav a:link, nav a:visited {
+                              color: inherit;
+                            }
+                            li.active {
+                              background: #000000;
+                              border-radius: 0.625em;
+                            }
+
+                            /* visuals */
+
+                            #logo {
+                              float: left;
+                              padding: 0.5em 1em;
+                              width: 12.5%;
+                            }
+                            #circle, #svgexample {
+                              text-indent: 3em;
+                            }
+                            video {
+                              width: 100%;
+                            }
+                            video source {
+                              width: 100%;
+                              height: auto;
+                            }
+
+                          hr {
+                            height: 1px;
+                            border-top: 1px solid #bbb;
+                            margin: 1em 0em;
+                          }
+                          /* Media Queries */
+                          /* 1px + */
+                          @media screen and (min-width:0.0625em) {
+                            body {
+                              font-size: 100%;
+                            }
+                            #sidecontents {
+                              display: none;
+                            }
+                            #extracontents {
+                              margin: 0em 0em 0em 0em;
+                              display: block;
+                              width: 100%;
+                              font-style: normal;
+                              font-size: 90%;
+                            }
+                          }
+                          /* 550px + */
+                          @media screen and (min-width:34.375em) {
+                            h2 {
+                              font-size: 1.5em;
+                            }
+                          }
+                          /* 650px + */
+                          @media screen and (min-width:40.625em) {
+                            body {
+                              font-size: 100%;
+                            }
+                            aside {
+                              font-size: 100%;
+                            }
+                            #sidecontents {
+                              display: block;
+                            }
+                            #extracontents {
+                              display: none;
+                            }
+                            article {
+                              width: 75%;
+                            }
+                            #bodyfooter {
+                              width: 75%;
+                            }
+                          }
+                          /* 700px + */
+                          @media screen and (min-width: 43.75em) {
+                            body {
+                              font-size: 105%;
+                            }
+                          }
+                          /* 800px + */
+                          @media screen and (min-width:50em) {
+                            body {
+                              font-size: 107.5%;
+                            }
+                          }
+                          /* 900px + */
+                          @media screen and (min-width:56.25em) {
+                            body {
+                              font-size: 110%;
+                            }
+                            aside {
+                              font-size: 110%;
+                            }
+                          }
+                          /* 1500px + */
+                          @media screen and (min-width:93.75em) {
+                            body {
+                              font-size: 115%;
+                            }
+                            aside {
+                              font-size: 115%;
+                            }
+                          }
+                          /* 1800px + */
+                          @media screen and (min-width:112.5em) {
+                            body {
+                              font-size: 125%;
+                            }
+                            aside {
+                              font-size: 125%;
+                            }
+                          }
