@@ -8,3 +8,7 @@ addWord str (x:xs)
     
 --2
 wordsToString :: [String] -> String
+wordsToString x = unwords x
+
+--wordsToString1 :: [String] -> String
+--wordsToString1 (x:xs) = toString x ++ "\n" wordsToString1 xs
