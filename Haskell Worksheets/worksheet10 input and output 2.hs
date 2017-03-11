@@ -67,20 +67,71 @@ wordsToString3 (x:xs) = x ++ "\n" ++ wordsToString3 xs
 wordsOfLength :: Int -> [String] -> [String]
 wordsOfLength x = filter (\s -> length s == x)
 
---4 create UI
+--4
 main :: IO ()
 main = do
+-- using readFile and read, reads the contents of words.txt (as a single string) and turns
+-- this string into a list of strings (see the example use of read in the getInt function in
+-- lecture FP8/9).
     contents <- readFile "words.txt"
     let listWords = read contents :: [String]
+-- using addWord, adds the word “lemon” to the list
     let newList = addWord "lemon" listWords
+-- using wordsToString, displays the words on the screen
     let listAsString = wordsToString3 newList
     print listAsString
-    writeFile "words.txt" listAsString
-
-
+-- using show and writeFile, turns the list into a single string and writes it back to
+-- words.txt.
+    writeFile "words.txt" (show listAsString)
     
---    newList <- actions listWords
---    let listAsString = show newList
---    writeFile "words.txt" listAsString
+-- 5
+-- Now, modify your program so that it performs the first step (reading the list in from the
+-- File) when it starts, and then provides a menu to the user with the following options:
+--  add a word to the list
+--  display all words
+--  display all words of a given length
+--  exit
+-- On exiting the program, the list should be written back to the file.
 
+main1 :: IO ()
+main1 = do
+    contents <- readFile "words.txt"
+    let listWords = read contents :: [String]
+    newList <- chooseAction listWords
+    let listAsString = show newList
+    writeFile "words.txt" (show listAsString)
 
+valChoice :: IO String
+valChoice = do
+    putStrLn "What would you like to do? Type in the number for your option."
+    putStrLn "1. Add a word to the list"
+    putStrLn "2. Display all words"
+    putStrLn "3. Display all words of a given length"
+    putStrLn "4. Exit"
+    line <- getLine
+    case line of
+        "1" -> return "1"
+        "2" -> return "2"
+        "3" -> return "3"
+        "4" -> return "4"
+        _ -> do putStrLn "Please input just one number"
+                valChoice
+        
+chooseAction ::  [String] -> IO [String]
+chooseAction listWords = do
+    choice <- valChoice
+    if choice == "1" then do
+        putStrLn "Type the word you want to add: "
+        word <- getLine
+        let newList = addWord word listWords
+        chooseAction newList
+    else if choice == "2" then do
+        print listWords
+        chooseAction listWords
+    else if choice == "3" then do
+        putStrLn "Type a length: "
+        length <- getInt
+        print (wordsOfLength length listWords)
+        chooseAction listWords
+    else
+        return listWords
